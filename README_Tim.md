@@ -15,6 +15,7 @@ The purpose of this project is collect movie data, pose questions about the data
 
 ### Choosing Categories
 
+* We decided to compare domestic box office receipts with foreign receipts as well as overall worldwide receipts for the highest grossing movies.
 * We decided not to work with either people's names, so we deleted all three actor name categories and the director name category. We also thought that it might be interesting to see how movies performed based on the popularity of the director and top billed actor, irrespective of their names, so we kept the categories pertaining to their Facebook likes. 
 * We also dropped the columns that contained links, posters, and the aspect ratio because we didn't think that we could do anything with those fields. We also dropped the fields that were already covered in the other data sets, except for the movie titles so that we could use that field for the merge. 
 * We dropped budget because of the large amount of missing data. 
@@ -35,7 +36,7 @@ We then looked for duplicates in the data. However, we wanted to be careful not 
 
 ### Merging
 
-We then merged our data.
+We then merged our data using the title of the movie as the index as that was the only thing in common with both dataframes.
 
 ### Analyzing the Data
 
@@ -57,10 +58,19 @@ We then did the same analysis comparing Runtime with Worldwide Lifetime Gross. W
 
 We found the movies with below average runtimes to average about $248 million and with above average runtimes to be about $262 million. This shows that movies that are longer than average tend to gross about $14 million more in gross revenue than shorter ones. However, we found the correlation to a weak 0.081. This contrasts with the correlation from before we removed the outliers of about 0.261.
  
+ #### Foreign vs. Domestic vs. Worldwide Lifetime Gross Revenue:
+ 
+ We looked at foreign and domestic revenue as a percentage of total worldwide revenue of the top 1400 films by year released to see if there is a trend. We saw that there is indeed a trend as time goes on, the percentage share of foreign revenue increases with a correlation of ~0.37, and ~-0.37 for domestic receipts.
+ 
+ Next we looked at the top 20 films to see the revenue by foreign and domestic receipts. We then looked for things they had in common which were: established franchises, sequels, remakes, and PG-13 or lower rating. We also looked at the share of the top 50 films by percentage of the sum of all receipts which showed a roughly 65% foreign, 35% domestic revenue comparison.
   
 ### Summary of Results
 
 1) We found that movies that had longer runtimes tended to receive both higher IMDb ratings and Worldwide Lifetime Gross Revenues, though the correlation was higher with IMDb ratings, 0.407, than with Revenues, 0.081.
+
+2) As time goes on, the share of revenue from abroad is increasing which may be due to several factors. Movies with which foreign audiences are familiar are major franchises which include sequels and remakes as well as having a PG-13 rating or lower making them suitable for more audiences.
+
+3) The top 20 films also had major visual and special effects providing for an enhanced theater viewing experience. Moviegoers are more likely to spend at the theater (which can charge more for a ticket and concessions) for that experience. In contrast to streaming a film, which is less likely to have special effects, via subscription or on demand.
 
 ### Conclusions from Results
 
@@ -68,4 +78,4 @@ This data shows that longer movie runtimes are correlated with better IMDb score
 
 I would argue that budget data would be useful for further investigations of the this question. This would useful information because a longer movie will probably cost more to make as a result of having to pay people more for having done more work. Therefore, since longer movies are correlated that strongly with greater revenue, it seems likely that longer movies might have a lower return on investment. 
 
-## Question 2:
+I would argue that a movie studio should opt for a the rights to a major franchise to make sequels and spin-offs which encourage moviegoers to spend at the theater rather than streaming. A major franchise would also be recognizable to foreign audiences which would bring in extra revenue. Special effects would enhance a theater experience as well. 
